@@ -1,8 +1,13 @@
 .header {
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   padding: 32px 0;
   background: transparent;
+
+  @media (max-width: $breakpoint-tb) {
+    padding: 20px 0;
+  }
 
   &--move {
     position: fixed;
@@ -12,7 +17,11 @@
     background: #FFFFFF;
 
     // box-shadow: 0 -15px 22px 0 #000000;
-    box-shadow: 0 0 3px rgb(0 0 0 / 80%);
+    // box-shadow: 0 0 3px rgb(0 0 0 / 80%);
+  }
+
+  &--active {
+    background: #FFFFFF;
   }
 
   &__container {
@@ -22,12 +31,115 @@
     height: 35px;
   }
 
+  &__phone {
+    @media (max-width: $breakpoint-tb) {
+      display: none;
+    }
+  }
+
+  &__mobile-wrapper {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    padding: 145px 85px 60px;
+    background-color: #FFFFFF;
+
+    &--show {
+      display: flex;
+    }
+  }
+
+  &__mobile-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__mobile-link {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    color: #000000;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__mobile-phone {
+    margin-top: 165px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  &__cross {
+    display: none;
+  }
+
+  &__button {
+    display: none;
+    width: 20px;
+    height: 20px;
+    color: #FFFFFF;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    span {
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      font-size: 26px;
+      line-height: 26px;
+    }
+
+    &--move {
+      color: #000000;
+    }
+
+    &--active {
+      width: 20px;
+      height: 20px;
+      color: #000000;
+
+      .header__cross {
+        display: flex;
+      }
+
+      .header__burger {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint-tb) {
+      display: block;
+    }
+  }
+
   &__logo {
     width: 124px;
     height: 19px;
     color: #FFFFFF;
 
-    &--move {
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--move, &--active {
       color: #000000;
     }
   }
@@ -35,6 +147,10 @@
   &__nav-list {
     display: flex;
     gap: 30px;
+
+    @media (max-width: $breakpoint-tb) {
+      display: none;
+    }
   }
 
   &__nav-link {

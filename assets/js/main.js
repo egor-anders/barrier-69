@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // const heroMain = document.querySelector('.hero__main');
     const headerLinks = header.querySelectorAll('.link');
     const headerHeight = header.offsetHeight;
+    const headerButton = header.querySelector('.header__button');
   
     console.log(headerHeight);
   
@@ -43,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrollDistance >= 1) {
         header.classList.add('header--move');
         headerLogo.classList.add('header__logo--move');
+        headerButton.classList.add('header__button--move');
+        
         hero.style.paddingTop = `${headerHeight}px`;
         headerLinks.forEach((link) => {
           link.classList.add('link--black');
@@ -50,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         header.classList.remove('header--move');
         headerLogo.classList.remove('header__logo--move');
+        headerButton.classList.remove('header__button--move');
         hero.style.paddingTop = null;
   
         headerLinks.forEach((link) => {
@@ -71,5 +75,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+
+  function openMenu() {
+    const menuButton = document.querySelector('.header__button');
+    const menuWrapper = document.querySelector('.header__mobile-wrapper');
+    const header = document.querySelector('.header');
+    const headerLogo = document.querySelector('.header__logo');
+
+    menuButton.addEventListener('click', ()=> {
+      menuButton.classList.toggle('header__button--active');
+      menuWrapper.classList.toggle('header__mobile-wrapper--show');
+      header.classList.toggle('header--active');
+      headerLogo.classList.toggle('header__logo--active');
+      document.querySelector('html').classList.toggle('no-scroll');
+    });
+
+    const mobileLinks = document.querySelectorAll('.header__mobile-link');
+    mobileLinks.forEach(item =>{
+      item.addEventListener('click', ()=> {
+        menuButton.classList.toggle('header__button--active');
+        menuWrapper.classList.toggle('header__mobile-wrapper--show');
+        header.classList.toggle('header--active');
+        headerLogo.classList.toggle('header__logo--active');
+        document.querySelector('html').classList.toggle('no-scroll');
+      });
+    });
+  }
+
   headerChange();
+  openMenu();
 });
