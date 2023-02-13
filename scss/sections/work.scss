@@ -1,5 +1,6 @@
 .work {
-  padding-bottom: $padding-bottom;
+  padding-top: var(--padding-top);
+  overflow-x: hidden;
 
   &__header {
     position: relative;
@@ -8,10 +9,24 @@
     align-items: center;
     width: 100%;
     margin-bottom: 96px;
+
+    @media (max-width: $breakpoint-xl) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      gap: 30px;
+    }
   }
 
   &__text {
     width: 445px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
   }
 
   &__left {
@@ -26,16 +41,32 @@
     width: 100vw;
     padding: 20px 0 20px 24px;
     background: #FAFAFA;
+
+    @media (max-width: $breakpoint-xl) {
+      position: static;
+      width: auto;
+      margin-right: -20px;
+      padding: 20px;
+      padding-right: 40px;
+    }
   }
 
   &__info-text {
     width: 546px;
+
+    @media (max-width: $breakpoint-xl) {
+      width: auto;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+
+    @media (max-width: $breakpoint-md) {
+      gap: 30px;
+    }
   }
 
   &__item {
@@ -43,6 +74,10 @@
     display: flex;
     flex-direction: column;
     gap: 64px;
+
+    @media (max-width: $breakpoint-md) {
+      gap: 40px;
+    }
 
     &--decor {
       &::before {
@@ -53,6 +88,10 @@
         height: 245px;
         background-image: url('../../assets/img/decor.svg');
         content: '';
+
+        @media (max-width: $breakpoint-xxl) {
+          display: none;
+        }
       }
     }
   }
@@ -69,6 +108,11 @@
       position: relative;
       z-index: 2;
       display: block;
+    }
+
+    @media (max-width: $breakpoint-xl) {
+      width: 100%;
+      height: auto;
     }
   }
 

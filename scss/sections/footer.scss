@@ -1,0 +1,68 @@
+.footer {
+  padding: 100px 0;
+  background-color: #000000;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 65px 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 63px;
+    border-bottom: 1px solid #6E6E6E;
+  }
+
+  &__links {
+    display: flex;
+    gap: 246px;
+
+    @media (max-width: $breakpoint-md) {
+      gap: 146px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__name {
+    margin: 0;
+    color: #6E6E6E;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  &__link {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    &--whatsapp {
+      position: relative;
+      bottom: 8px;
+      margin-left: -45px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__privacy {
+    margin-top: 38px;
+    color: #6E6E6E;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}

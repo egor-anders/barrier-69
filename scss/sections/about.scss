@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: column;
   padding-top: 150px;
-  padding-bottom: $padding-bottom;
 
   &__info {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 64px;
+    margin-bottom: var(--margin-bottom);
 
     &::after {
       position: absolute;
@@ -23,6 +22,10 @@
 
   &__text {
     width: 570px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 440px;
+    }
   }
 
   &__list {
@@ -40,6 +43,16 @@
     padding: 30px;
     background: #FAFAFA;
 
+    @media (max-width: $breakpoint-xl) {
+      height: 334px;
+      padding: 25px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      height: 280px;
+      padding: 20px 10px;
+    }
+
     &--yellow {
       background: #F0C631;
       box-shadow: 0 173px 69px rgb(0 0 0 / 1%), 0 98px 59px rgb(0 0 0 / 5%), 0 43px 43px rgb(0 0 0 / 9%), 0 11px 24px rgb(0 0 0 / 10%), 0 0 0 rgb(0 0 0 / 10%);
@@ -51,6 +64,14 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 120%;
+
+    @media (max-width: $breakpoint-xl) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 18px;
+    }
 
     &--bold {
       font-weight: 700;
