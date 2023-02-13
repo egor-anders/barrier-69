@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('../../assets/img/bg-main.png');
+  background-position: center;
+  background-size: cover;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 152px;
+  }
+
+  &__text {
+    width: 570px;
+    margin-bottom: 60px;
+  }
+
+  &__button {
+    width: fit-content;
+    padding: 19px 54px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    background-color: #F0C631;
+
+    &:hover {
+      background-color: #FFFFFF;
+    }
+  }
+}

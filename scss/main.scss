@@ -1,6 +1,9 @@
 @import 'vendor/normalize.scss';
 @import 'variables.scss';
-
+@import 'components.scss';
+@import 'sections/header.scss';
+@import 'sections/hero.scss';
+@import 'sections/about.scss';
 
 
 @font-face {
@@ -32,10 +35,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #000000;
   font-weight: 400;
   font-family: 'Inter', sans-serif;
-  background: var(--bg-color-main);
-
 }
 
 
@@ -45,36 +47,4 @@ html {
 
 .no-scroll {
   overflow: hidden;
-}
-
-
-h1 {
-  font-weight: 600;
-  font-size: 80px;
-  line-height: 100%;
-  margin-top: 0;
-  margin-bottom: 28px;
-}
-
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-
-a {
-  text-decoration: none;
-}
-
-h1, h2, h3, h4 {
-  margin: 0;
-  padding: 0;
 }

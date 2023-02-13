@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  height: 98px;
+  padding: 32px 0;
+  background: transparent;
+
+  &--move {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 124px;
+    height: 19px;
+    color: #FFFFFF;
+
+    &--move {
+      color: #000000;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__nav-item {
+    padding-bottom: 14px;
+
+    a {
+      padding-bottom: 14px;
+    }
+
+    &--active {
+      border-bottom: 2px solid #F0C631;
+    }
+  }
+}
