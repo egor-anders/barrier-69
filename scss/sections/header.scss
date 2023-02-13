@@ -29,6 +29,11 @@
     justify-content: space-between;
     align-items: center;
     height: 35px;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__phone {
@@ -41,6 +46,7 @@
     position: absolute;
     top: 74px;
     left: 0;
+    z-index: 2000;
     display: none;
     flex-direction: column;
     box-sizing: border-box;
@@ -48,6 +54,10 @@
     height: 100vh;
     padding: 145px 85px 60px;
     background-color: #FFFFFF;
+
+    @media (max-width: $breakpoint-mobile) {
+      top: 41px;
+    }
 
     &--show {
       display: flex;
@@ -133,6 +143,11 @@
     width: 124px;
     height: 19px;
     color: #FFFFFF;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 104px;
+      height: 16px;
+    }
 
     svg {
       width: 100%;
