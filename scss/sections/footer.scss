@@ -69,11 +69,17 @@
 
     &--whatsapp {
       position: relative;
-      bottom: 8px;
-      margin-left: -45px;
+      padding-left: 35px;
 
-      @media (max-width: $breakpoint-tb) {
-        margin-left: 0;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/30px-WhatsApp.svg.png');
+        transform: translateY(-50%);
+        content: '';
       }
     }
   }
